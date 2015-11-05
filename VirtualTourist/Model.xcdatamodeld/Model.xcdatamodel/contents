@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Pictures" representedClassName="Pictures" syncable="YES">
+        <attribute name="picURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pins" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pins" inverseName="pics" inverseEntity="Pins" syncable="YES"/>
+    </entity>
+    <entity name="Pins" representedClassName="Pins" syncable="YES">
+        <attribute name="pinLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pinLon" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="pics" toMany="YES" deletionRule="Cascade" destinationEntity="Pictures" inverseName="pins" inverseEntity="Pictures" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Pictures" positionX="-63" positionY="0" width="128" height="75"/>
+        <element name="Pins" positionX="-63" positionY="-18" width="128" height="90"/>
+    </elements>
+</model>

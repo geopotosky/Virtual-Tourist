@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import CoreData
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //* - Selected Coordinate values
+    var selectedLatitude : Double!
+    var selectedLongitude : Double!
+    var returningFromPhotoAlbum : Bool!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
